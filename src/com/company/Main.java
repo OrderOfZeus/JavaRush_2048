@@ -2,6 +2,8 @@ package com.javarush.games.game2048;
 
 import com.javarush.engine.cell.*;
 
+public void DELETE TEST;
+
 public class Game2048 extends Game {
     private static final int SIDE = 4;
     public void initialize(){
