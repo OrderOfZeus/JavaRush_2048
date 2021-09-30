@@ -10,7 +10,10 @@ public class Game2048 extends Game {
         createGame();
         drawScene();
     }
-    private void createGame() {}
+    private void createGame() {
+        createNewNumber();
+        createNewNumber();
+    }
     private void drawScene(){
         for (int x=0; x < SIDE; x++){
             for (int y=0; y<SIDE; y++){
@@ -18,5 +21,16 @@ public class Game2048 extends Game {
             }
         }
     }
-
+    private void createNewNumber(){
+        boolean isCreated = false;
+        do {
+            int x = getRandomNumber(SIDE);
+            int y = getRandomNumber(SIDE);
+            if (gameField[y][x] == 0) {
+                gameField[y][x] = getRandomNumber(10) < 9 ? 2 : 4;
+                isCreated = true;
+            }
+        }
+        while(!isCreated);
+    }
 }
