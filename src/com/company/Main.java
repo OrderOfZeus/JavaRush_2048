@@ -19,7 +19,7 @@ public class Game2048 extends Game {
 
     private void win() {
         isGameStopped = true;
-        showMessageDialog(Color.BLACK, YOU WIN!, Color.WHITE, 50);
+        showMessageDialog(Color.NONE, YOU WIN!, Color.WHITE, 50);
     }
 
     public void onKeyPress(Key key){
